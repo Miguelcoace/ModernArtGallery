@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+
+// all keyframes for the animations of the website
+
+.button:hover {
+    cursor: pointer;
+    background-color: $secondary-color;
+    transition: background-color 0.2s ease;
+
+    a {
+        background-color: $secondary-color;
+        transition: background-color 0.2s ease;
+    }
+
+    img {
+        background-color: $primary-color;
+        transition: background-color 0.2s ease;
+    }
+}

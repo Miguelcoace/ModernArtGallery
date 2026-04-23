@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit:wght@100..900&display=swap");
+.button:hover {
+  cursor: pointer;
+  background-color: #D5966C;
+  transition: background-color 0.2s ease;
+}
+.button:hover a {
+  background-color: #D5966C;
+  transition: background-color 0.2s ease;
+}
+.button:hover img {
+  background-color: #151515;
+  transition: background-color 0.2s ease;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  color: #FFFFFF;
+  margin-left: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 3.64px;
+  padding-left: 32px;
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .button {
+    margin: 0;
+  }
+}
+@media (max-width: 2560px) and (min-width: 1440px) {
+  .button {
+    margin: 0;
+  }
+}
+.button img {
+  background-color: #D5966C;
+  padding: 24px;
+  transition: background-color 0.2s ease;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  header.header {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+  header.header {
+    display: flex;
+    flex-direction: row;
+    height: 800px;
+  }
+  header.header::before {
+    content: "";
+    position: relative;
+    width: 31.25%;
+    height: 100%;
+    background: #151515;
+    z-index: 1;
+  }
+}
+@media (max-width: 2560px) and (min-width: 1440px) {
+  header.header {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+  }
+  header.header::before {
+    content: "";
+    position: relative;
+    width: 31.25%;
+    height: 100%;
+    background: #151515;
+    z-index: 1;
+  }
+}
+header.header > picture {
+  width: 100%;
+}
+header.header > picture img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  header.header > picture img {
+    position: absolute;
+    width: 57%;
+  }
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+  header.header > picture img {
+    height: 100%;
+  }
+}
+@media (max-width: 2560px) and (min-width: 1440px) {
+  header.header > picture img {
+    height: 100%;
+  }
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+  header.header > picture {
+    width: 37.5%;
+  }
+}
+@media (max-width: 2560px) and (min-width: 1440px) {
+  header.header > picture {
+    width: 37.5%;
+  }
+}
+header.header div.header_text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+  z-index: 2;
+  background: transparent;
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  header.header div.header_text {
+    width: 44%;
+    height: auto;
+    position: absolute;
+    margin-left: calc(389px + (100vw - 768px) * 0.65);
+    margin-top: calc(145px + (100vw - 768px) * 0.5);
+    gap: 48px;
+  }
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+  header.header div.header_text {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    margin-left: calc(640px + (100vw - 1024px) * 0.68);
+    margin-top: calc(190px + (100vh - 900px) * 0.6);
+  }
+  header.header div.header_text h1.title {
+    position: absolute;
+    color: #FFFFFF;
+    margin-left: calc(-590px + (100vw - 1024px) * -0.35);
+    margin-top: calc(0px + (100vh - 900px) * -0.2);
+  }
+}
+@media (max-width: 2560px) and (min-width: 1440px) {
+  header.header div.header_text {
+    width: clamp(350px, 27vw + 2vh, 450px);
+    height: auto;
+    position: absolute;
+    margin-left: calc(925px + (100vw - 1440px) * 0.65);
+    margin-top: calc(190px + (100vh - 900px) * 0.5);
+  }
+  header.header div.header_text h1.title {
+    position: absolute;
+    color: #FFFFFF;
+    margin-left: calc(-760px + (100vw - 1440px) * -0.45);
+    margin-top: calc(0px + (100vh - 900px) * -0.25);
+  }
+}
+
+html * {
+  font-family: "Outfit", sans-serif;
+  background-color: #FFFFFF;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 60px;
+  line-height: 55px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0 16px;
+  color: #151515;
+  background: transparent;
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .title {
+    font-size: 70px;
+    line-height: 65px;
+    padding: 0;
+  }
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .title {
+    font-size: 96px;
+    line-height: 88px;
+    padding: 0;
+  }
+}
+@media (max-width: 2560px) and (min-width: 1440px) {
+  .title {
+    font-size: clamp(96px, 5vw + 2vh, 150px);
+    line-height: clamp(88px, 5vw + 2vh, 140px);
+    padding: 0;
+  }
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 28px;
+  color: #444444;
+  padding: 0 16px;
+  font-weight: 400;
+  background: transparent;
+}
+@media (max-width: 479px) and (min-width: 375px) {
+  .paragraph {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .paragraph {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .paragraph {
+    font-size: 22px;
+    line-height: 32px;
+    padding: 0;
+  }
+}
+@media (max-width: 2560px) and (min-width: 1440px) {
+  .paragraph {
+    font-size: clamp(22px, 1vw + 1vh, 38px);
+    line-height: clamp(32px, 1vw + 2vh, 46px);
+    padding: 0;
+  }
+}/*# sourceMappingURL=app.css.map */

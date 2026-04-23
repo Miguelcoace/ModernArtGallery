@@ -1,0 +1,71 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+html * {
+    font-family: $outfit-font;
+    background-color: $background-color;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.title {
+    font-family: $bigShoulders-font;
+    font-size: 60px;
+    line-height: 55px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0 16px;
+    color: $primary-color;
+    background: transparent;
+
+    @include breakpoint(tablet) {
+        font-size: 70px;
+        line-height: 65px;
+        padding: 0;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 96px;
+        line-height: 88px;
+        padding: 0;
+    }
+
+    @include breakpoint(largedesktop) {
+        font-size: clamp(96px, calc(5vw + 2vh), 150px);
+        line-height: clamp(88px, calc(5vw + 2vh), 140px);
+        padding: 0;
+    }
+}
+
+.paragraph {
+    font-size: 16px;
+    line-height: 28px;
+    color: $paragraph-color;
+    padding: 0 16px;
+    font-weight: 400;
+    background: transparent;
+
+    @include breakpoint(mobile) {
+        font-size: 18px;
+    }
+
+    @include breakpoint(tablet) {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 22px;
+        line-height: 32px;
+        padding: 0;
+    }
+
+    @include breakpoint(largedesktop) {
+        font-size: clamp(22px, 1vw + 1vh, 38px);
+        line-height: clamp(32px, 1vw + 2vh, 46px);
+        padding: 0;
+    }
+}
+ 
