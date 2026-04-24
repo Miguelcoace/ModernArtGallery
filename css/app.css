@@ -137,7 +137,7 @@ header.header div.header_text {
     height: auto;
     position: absolute;
     margin-left: calc(389px + (100vw - 768px) * 0.65);
-    margin-top: calc(145px + (100vw - 768px) * 0.5);
+    margin-top: calc(145px + (100vw - 1150px) * 0.5);
     gap: 48px;
   }
 }
@@ -169,6 +169,130 @@ header.header div.header_text {
     color: #FFFFFF;
     margin-left: calc(-760px + (100vw - 1440px) * -0.45);
     margin-top: calc(0px + (100vh - 900px) * -0.25);
+  }
+}
+
+main.main {
+  padding: 0px 16px;
+  margin-top: 120px;
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  main.main {
+    margin-top: calc(820px + (100vw - 768px) * 1);
+    margin-left: 39px;
+    margin-right: 40px;
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-areas: "main_info gallery_image gallery_image" "art_image art_image exposition" "art_image art_image greating";
+    padding: 0;
+    row-gap: 11px;
+    -moz-column-gap: 11px;
+         column-gap: 11px;
+    grid-template-columns: 1.99fr 1fr 1fr;
+  }
+  main.main img.gallery {
+    grid-area: gallery_image;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 11px;
+  }
+  main.main div.main_info {
+    grid-area: main_info;
+    width: 100%;
+    padding: 36px 68.3px 54px 0px;
+  }
+  main.main img.art {
+    grid-area: art_image;
+    width: 398px;
+    height: 720px;
+  }
+  main.main img.exposition {
+    grid-area: exposition;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  main.main picture {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+main.main img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+main.main h2 {
+  font-size: 44px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin: 9px 0px 21px 0px;
+  padding: 0;
+}
+@media (max-width: 479px) and (min-width: 375px) {
+  main.main h2 {
+    font-size: 50px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  main.main h2 {
+    max-width: 300px;
+    font-size: clamp(50px, 5vw + 1vh, 80px);
+    line-height: clamp(45px, 5vw + 1vh, 75px);
+  }
+}
+main.main > .main_info > p {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+  letter-spacing: 0px;
+}
+@media (max-width: 479px) and (min-width: 375px) {
+  main.main > .main_info > p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  main.main > .main_info > p {
+    font-size: clamp(17px, 18px + 12 * (100vw - 768px) / 255, 30px);
+    line-height: clamp(28px, 28px + 12 * (100vw - 768px) / 255, 40px);
+  }
+}
+main.main aside.greating {
+  background-color: #151515;
+  padding: 48px 24px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 120px;
+}
+main.main aside.greating h2 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 21px;
+}
+main.main aside.greating p {
+  color: #FFFFFF;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  main.main aside.greating {
+    grid-area: greating;
+    padding: 87px 29px;
+    margin-top: -5px;
+  }
+  main.main aside.greating h2 {
+    font-size: 50px;
+    line-height: 45px;
+  }
+  main.main aside.greating p {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 

@@ -1,0 +1,136 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+main.main {
+    padding: 0px 16px;
+    margin-top: 120px;
+
+    @include breakpoint(tablet){
+        margin-top: calc(820px + (100vw - 768px) * 1);
+        margin-left: 39px;
+        margin-right: 40px;
+        margin-bottom: 120px;
+        display: grid;
+        grid-template-areas: "main_info gallery_image gallery_image"
+                             "art_image art_image exposition"
+                             "art_image art_image greating";
+        padding: 0;
+        row-gap: 11px;
+        column-gap: 11px;
+        grid-template-columns: 1.99fr 1fr 1fr;
+
+        img.gallery {
+            grid-area: gallery_image;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 11px;
+        }
+
+        div.main_info {
+            grid-area: main_info;
+            width: 100%;
+            padding: 36px 68.3px 54px 0px;
+        }
+
+        img.art {
+            grid-area: art_image;
+            width: 398px;
+            height: 720px;
+        }
+        
+        img.exposition {
+            grid-area: exposition;
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+
+        picture {
+            width: fit-content;
+            height: fit-content;
+        }
+
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        font-size: 44px;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin: 9px 0px 21px 0px;
+        padding: 0;
+
+
+        @include breakpoint(mobile){
+            font-size: 50px;
+            line-height: 45px;
+            
+        }
+
+        @include breakpoint(tablet){
+            max-width: 300px;
+            font-size: clamp(50px, 5vw + 1vh, 80px);
+            line-height: clamp(45px, 5vw + 1vh, 75px);
+
+        }
+    }
+    
+    & > .main_info > p {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0;
+        letter-spacing: 0px;
+
+        @include breakpoint(mobile) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        @include breakpoint(tablet) {
+            font-size: clamp(17px, calc(18px + 12 * ((100vw - 768px) / 255)), 30px);
+            line-height: clamp(28px, calc(28px + 12 * ((100vw - 768px) / 255)), 40px);
+        }
+    }
+
+    aside.greating {
+
+        background-color: $primary_color;
+        padding: 48px 24px;
+        height: fit-content;
+        margin-bottom: 120px;
+
+        h2 {
+            color: $background_color;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 21px;
+        }
+
+        p {
+            color: $background_color;
+            padding: 0;
+            margin: 0;
+        }
+
+        @include breakpoint(tablet) {
+            grid-area: greating;
+            padding: 87px 29px;
+            margin-top: -5px;
+
+            h2 {
+                font-size: 50px;
+                line-height: 45px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28px;   
+            }
+        }
+    }
+}
