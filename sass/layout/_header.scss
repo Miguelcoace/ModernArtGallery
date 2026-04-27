@@ -78,7 +78,7 @@ header.header {
             height: auto;
             position: absolute;
             margin-left: calc(389px + (100vw - 768px) * 0.65);
-            margin-top: calc(145px + (100vw - 1150px) * 0.50);
+            margin-top: calc(145px + (100vw - 768px) * 0.50);
             gap: 48px;
         }
 
@@ -87,7 +87,7 @@ header.header {
             height: auto;
             position: absolute;
             margin-left: calc(640px + (100vw - 1024px) * 0.68);
-            margin-top: calc(190px + (100vh - 900px) * 0.6);
+            margin-top: calc(190px + (100vw - 1024px) * 0.1);
 
             h1.title {
                 position: absolute;

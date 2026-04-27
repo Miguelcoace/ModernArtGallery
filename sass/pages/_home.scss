@@ -17,7 +17,7 @@ main.main {
         padding: 0;
         row-gap: 11px;
         column-gap: 11px;
-        grid-template-columns: 1.99fr 1fr 1fr;
+        grid-template-columns: 42.25% 13.95% 40%;
 
         img.gallery {
             grid-area: gallery_image;
@@ -34,8 +34,9 @@ main.main {
 
         img.art {
             grid-area: art_image;
-            width: 398px;
-            height: 720px;
+            width: 100%;
+            height: 85.7%;
+            margin-bottom: 0;
         }
         
         img.exposition {
@@ -55,7 +56,6 @@ main.main {
     img {
         width: 100%;
         height: auto;
-        margin-bottom: 16px;
     }
 
     h2 {
@@ -92,8 +92,8 @@ main.main {
         }
 
         @include breakpoint(tablet) {
-            font-size: clamp(17px, calc(18px + 12 * ((100vw - 768px) / 255)), 30px);
-            line-height: clamp(28px, calc(28px + 12 * ((100vw - 768px) / 255)), 40px);
+            font-size: clamp(17.9px, 2.33vw, 30px);
+            line-height: clamp(28px, 3.65vw, 40px);
         }
     }
 
@@ -119,7 +119,9 @@ main.main {
 
         @include breakpoint(tablet) {
             grid-area: greating;
-            padding: 87px 29px;
+            padding: 
+                clamp(48px, calc(48px + (87 - 40) * ((100vh - 768px) / (1024 - 768))), 87px)
+                clamp(29px, calc(69px + (29 - 69) * ((100vh - 768px) / (1024 - 768))), 69px);
             margin-top: -5px;
 
             h2 {
