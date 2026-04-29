@@ -27,8 +27,8 @@ body {
     }
 
     @include breakpoint(desktop) {
-        font-size: 96px;
-        line-height: 88px;
+        font-size: clamp(70px, calc(5vw + 2vh), 96px);
+        line-height: clamp(62px, calc(5vw + 2vh), 88px);
         padding: 0;
     }
 

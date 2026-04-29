@@ -17,9 +17,11 @@ main.main {
         padding: 0;
         row-gap: 11px;
         column-gap: 11px;
-        grid-template-columns: 42.25% 13.95% 40%;
+        height: fit-content;
+        grid-template-rows: 31.413% 24.581% 31.099%;
+        grid-template-columns: 42.24% auto 40.64%;
 
-        img.gallery {
+        & .gallery {
             grid-area: gallery_image;
             width: 100%;
             height: 100%;
@@ -29,20 +31,25 @@ main.main {
         div.main_info {
             grid-area: main_info;
             width: 100%;
-            padding: 36px 68.3px 54px 0px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            padding-right: 68px;
         }
 
         img.art {
             grid-area: art_image;
             width: 100%;
-            height: 85.7%;
+            height: 100%;
             margin-bottom: 0;
         }
         
-        img.exposition {
+        & .exposition {
             grid-area: exposition;
             width: 100%;
-            height: auto;
+            height: 100%;
             margin: 0;
         }
 
@@ -53,9 +60,112 @@ main.main {
 
     }
 
+    @include breakpoint(desktop){
+        margin-top: 180px;
+        display: grid;
+        grid-template-areas: "main_info gallery_image gallery_image"
+                             "art_image art_image exposition"
+                             "art_image art_image greating";
+        padding: 0;
+        row-gap: clamp(21.55px, 2.1vw, 30px);
+        column-gap: clamp(21.55px, 2.1vw, 30px);
+        padding: 0px calc(117px + (100vw - 1024px) * 0.116) 0px calc(116.62px + (100vw - 1024px) * 0.1142);
+        grid-template-rows: 34.783% 27.22% 32.78%;
+        grid-template-columns: 40.82% auto 40.82%;
+        max-height: 1150px;
+        margin-bottom: 180px;
+
+        & .gallery {
+            grid-area: gallery_image;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0;
+        }
+        
+        div.main_info {
+            grid-area: main_info;
+            height: 100%;
+            padding: calc(42.6px + (100vw - 1024px) * 0.042) 
+            calc(67.5px + (100vw - 1024px) * 0.0663) 
+            calc(42.6px + (100vw - 1024px) * 0.042) 
+            0px;
+        }
+
+        img.art {
+            grid-area: art_image;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        
+        & .exposition {
+            grid-area: exposition;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        picture {
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+
+    @include breakpoint(largedesktop){
+        margin-top: 180px;
+        display: grid;
+        grid-template-areas: "main_info gallery_image gallery_image"
+                             "art_image art_image exposition"
+                             "art_image art_image greating";
+        padding: 0;
+        row-gap: 30px;
+        column-gap: 30px;
+        padding: 0 165px;
+        grid-template-rows: 34.783% 27.22% 32.78%;
+        grid-template-columns: 40.82% auto 40.82%;
+        margin-bottom: 180px;
+
+        & .gallery {
+            grid-area: gallery_image;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0;
+        }
+        
+        div.main_info {
+            grid-area: main_info;
+            height: 100%;
+            padding: calc(60px + (100vw - 1024px) * 0.042) 
+            calc(90px + (100vw - 1024px) * 0.0663) 
+            calc(60px + (100vw - 1024px) * 0.042) 
+            0px;
+            max-width: clamp(432px, 30.001vw, 768px);
+        }
+
+        img.art {
+            grid-area: art_image;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        
+        & .exposition {
+            grid-area: exposition;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        picture {
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+
     img {
         width: 100%;
         height: auto;
+        margin-bottom: 16px;
     }
 
     h2 {
@@ -78,6 +188,29 @@ main.main {
             line-height: clamp(45px, 5vw + 1vh, 75px);
 
         }
+
+        @include breakpoint(desktop){
+            font-size: clamp(42.6px, 4.96vw, 60px);
+            line-height: clamp(42.6px, 4.96vw, 60px);
+            margin-top: 0;
+            margin-bottom: 32px;
+            max-width: 350px;
+
+            br.jump{
+                display: none;
+            }
+        }
+
+        @include breakpoint(largedesktop){
+            font-size: clamp(60px, 4.166vw, 107px);
+            line-height: clamp(60px, 4.166vw, 107px);
+            margin-top: 0;
+            margin-bottom: 32px;
+
+            br.jump{
+                display: none;
+            }
+        }
     }
     
     & > .main_info > p {
@@ -85,6 +218,8 @@ main.main {
         line-height: 24px;
         padding: 0;
         letter-spacing: 0px;
+        margin-bottom: 32px;
+        font-weight: 300;
 
         @include breakpoint(mobile) {
             font-size: 18px;
@@ -94,45 +229,113 @@ main.main {
         @include breakpoint(tablet) {
             font-size: clamp(17.9px, 2.33vw, 30px);
             line-height: clamp(28px, 3.65vw, 40px);
+            margin-bottom: 0px;
+        }
+
+        @include breakpoint(desktop){
+            font-size: clamp(15.64px, 1.65vw, 22px);
+            line-height: clamp(25.64px, 1.65vw, 32px);
+            max-width: 350px;
+            font-weight: 300;
+            margin: 0px;
+        }
+
+        @include breakpoint(largedesktop){
+            font-size: clamp(22px, 1.527vw, 39.11px);
+            line-height: clamp(32px, 1.527vw, 49.11px);
+            font-weight: 300;
+            margin: 0px;
         }
     }
-
+    
     aside.greating {
-
+        
         background-color: $primary_color;
         padding: 48px 24px;
+        width: fit-content;
         height: fit-content;
         margin-bottom: 120px;
-
+        
         h2 {
             color: $background_color;
             margin: 0;
             padding: 0;
             margin-bottom: 21px;
         }
-
+        
         p {
             color: $background_color;
             padding: 0;
             margin: 0;
         }
-
+        
         @include breakpoint(tablet) {
             grid-area: greating;
-            padding: 
-                clamp(48px, calc(48px + (87 - 40) * ((100vh - 768px) / (1024 - 768))), 87px)
-                clamp(29px, calc(69px + (29 - 69) * ((100vh - 768px) / (1024 - 768))), 69px);
-            margin-top: -5px;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            
             h2 {
-                font-size: 50px;
-                line-height: 45px;
+                font-size: clamp(50px, 6.51vw, 60px);
+                line-height: clamp(45px, 6.51vw, 60px);
+                align-self: flex-start;
+            }
+            
+            p {
+                font-size: clamp(18px, 2.343vw, 22px);
+                line-height: 28px;   
+            }
+        }
+        
+        @include breakpoint(desktop){
+            grid-area: greating;
+            padding: clamp(38px, 3.71vw, 65px) clamp(34.1px, 3.33vw, 48px);
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                font-size: clamp(42.6px, 4.96vw, 60px);
+                line-height: clamp(42.6px, 4.96vw, 60px);
+                max-width: 445px;
             }
 
             p {
-                font-size: 18px;
-                line-height: 28px;   
+                font-size: clamp(15.64px, 1.65vw, 22px);
+                line-height: clamp(25.64px, 1.65vw, 32px);
+                max-width: 445px;
             }
+            
+        }
+
+        @include breakpoint(largedesktop){
+            grid-area: greating;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 65px clamp(48px, 3.33vw, 83px);
+
+            h2 {
+                font-size: clamp(60px, 4.166vw, 107px);
+                line-height: clamp(60px, 4.166vw, 107px);
+                align-self: flex-start;
+            }
+
+            p {
+                font-size: clamp(22px, 1.527vw, 39.11px);
+                line-height: clamp(32px, 1.527vw, 49.11px);
+            }
+            
         }
     }
 }

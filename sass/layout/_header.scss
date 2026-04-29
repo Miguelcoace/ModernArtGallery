@@ -86,14 +86,14 @@ header.header {
             width: 350px;
             height: auto;
             position: absolute;
-            margin-left: calc(640px + (100vw - 1024px) * 0.68);
-            margin-top: calc(190px + (100vw - 1024px) * 0.1º);
+            margin-left: calc(668px + (100vw - 1024px) * 0.62);
+            margin-top: calc(200px + (100vw - 1024px) * 0.1);
 
             h1.title {
                 position: absolute;
                 color: $background-color;
-                margin-left: calc(-590px + (100vw - 1024px)* -0.35);
-                margin-top: calc(0px + (100vh - 900px)* -0.2);
+                margin-left: calc(-550px + (100vw - 1024px)* -0.4);
+                margin-top: calc(40px + (100vw - 1024px)* -0.19);
             }
         }
 
@@ -102,13 +102,13 @@ header.header {
             height: auto;
             position: absolute;
             margin-left: calc(925px + (100vw - 1440px)* 0.65);
-            margin-top: calc(190px + (100vh - 900px)* 0.5);
+            margin-top: calc(190px + (100vw - 1440px)* 0.5);
 
             h1.title {
                 position: absolute;
                 color: $background-color;
                 margin-left: calc(-760px + (100vw - 1440px)* -0.45);
-                margin-top: calc(0px + (100vh - 900px)* -0.25);
+                margin-top: calc(-45px + (100vw - 1440px)* -0.25);
             }
         }
     }

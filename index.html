@@ -46,17 +46,23 @@
 
   <main class="main">
 
-    <img src="img/gallery.png" alt="Gallery image" class="gallery">
+    <picture class="gallery">
+
+      <source media="(min-width: 1024px)" srcset="img/gallery_desktop.png">
+      <img src="img/gallery.png" alt="Gallery image" class="gallery">
+
+    </picture>
     <div class="main_info">
 
-      <h2 class="title">Your Day <br>at the Gallery</h2>
+      <h2 class="title">Your Day <br class="jump">at the Gallery</h2>
       <p class="paragraph">Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative process.</p>
 
 
     </div>
     <img src="img/art.png" alt="Art image" class="art">
-    <picture>
+    <picture class="exposition">
 
+      <source media="(min-width: 1024px)" srcset="img/exposition.png">
       <source media="(min-width: 768px)" srcset="img/exposition_tablet.png">
       <img src="img/exposition.png" alt="Exposition image" class="exposition">
 
