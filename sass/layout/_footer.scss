@@ -1,0 +1,110 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+footer.footer {
+    background-color: $primary_color;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include breakpoint(tablet){
+        flex-direction: row;
+        padding: 56px 40px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    @include breakpoint(desktop){
+        flex-direction: row;
+        padding: clamp(56.89px, 5.555vw, 80px) clamp(117.33px, 11.45vw, 165px);
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+
+    @include breakpoint(largedesktop){
+        flex-direction: row;
+        padding: clamp(80px, 5.55vw, 142.2px) clamp(165px, 11.45vw, 293.33px);
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+
+    h2.footer_title{
+        background-color: transparent;
+        color: $background_color;
+        text-transform: uppercase;
+        font-family: $bigShoulders-font;
+        max-width: 120px;
+        font-weight: 900;
+
+        @include breakpoint(desktop){
+            font-size: 32px;
+            max-width: 160px;
+        }
+
+        @include breakpoint(largedesktop){
+            font-size: 32px;
+            max-width: 160px;
+        }
+    }
+
+    p {
+        color: $background_color;
+        padding: 0;
+
+        @include breakpoint(tablet){
+            font-size: 16px;
+            line-height: 26px;
+            max-width: 281px;
+        }
+
+        @include breakpoint(desktop){
+            font-size: clamp(16px, 1.562vw, 18px);
+            line-height: clamp(26px, 1.539vw, 28px);
+            max-width: clamp(305.78px, 30vw, 430px);
+            margin-left: calc(-99.56px + (100vw - 1024px) * -0.09745);
+        }
+
+        @include breakpoint(largedesktop){
+            font-size: clamp(18px, 1.25vw, 32px);
+            line-height: clamp(28px, 1.944vw, 42px);
+            max-width: clamp(430px, 29.86vw, 764.44px);
+            margin-left: calc(-140px + (100vw - 1024px) * -0.07089);
+        }
+    }
+
+    aside.media{
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: fit-content;
+
+        a{
+            background-color: transparent;
+
+            img{
+                background-color: transparent;
+            }
+        }
+
+        @include breakpoint(largedesktop){
+            gap: clamp(20px, 1.38vw, 35.55px);
+
+            a{
+                width: max-content;
+                height: max-content;
+
+                img{
+                    width: clamp(20px, 1.38vw, 35.55px);
+                    height: clamp(20px, 1.38vw, 35.55px);
+
+                }
+            }
+        }
+    }
+
+}
