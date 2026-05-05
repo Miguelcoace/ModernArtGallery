@@ -297,7 +297,7 @@ header.header div.header_text a {
 }
 
 header.location_header {
-  background-image: url("../../img/Maps.png");
+  background-image: url("/img/Maps.png");
   width: 100%;
   height: 550px;
   background-size: cover;
@@ -313,7 +313,7 @@ header.location_header a img {
 }
 @media (max-width: 1023px) and (min-width: 768px) {
   header.location_header {
-    background-image: url("../../img/Maps_tablet.png");
+    background-image: url("/img/Maps_tablet.png");
     height: 600px;
   }
   header.location_header a {
@@ -322,7 +322,7 @@ header.location_header a img {
 }
 @media (max-width: 1439px) and (min-width: 1024px) {
   header.location_header {
-    background-image: url("../../img/Maps_desktop.png");
+    background-image: url("/img/Maps_desktop.png");
     height: 600px;
   }
   header.location_header a {
@@ -331,7 +331,7 @@ header.location_header a img {
 }
 @media (max-width: 2560px) and (min-width: 1440px) {
   header.location_header {
-    background-image: url("../../img/Maps_desktop.png");
+    background-image: url("/img/Maps_desktop.png");
     height: 600px;
   }
   header.location_header a {
