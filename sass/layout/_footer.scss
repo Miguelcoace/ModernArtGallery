@@ -107,4 +107,20 @@ footer.footer {
         }
     }
 
+    &.location {
+        background-color: $secondary-color;
+        
+        h2 {
+            color: $primary-color;
+        }
+
+        p {
+            color: $primary-color;
+        }
+
+        img {
+            color: $primary-color;
+        }
+    }
+
 }
